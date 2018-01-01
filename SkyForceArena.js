@@ -76,6 +76,5 @@ $("#buttonPlay").click(function(event) {
   $("#backgroundIMG").css("top", -1200);
 });
 $("#buttonQuit").click(function(event) {
-  //top.location = "file:///home/alexandre/Documents/Code/interactiviter/SkyForceMultiInvaders.html";
   document.location.reload();
 });
