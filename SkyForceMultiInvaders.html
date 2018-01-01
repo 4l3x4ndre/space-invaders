@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Space Invaders</title>
+
+    <style media="screen">
+      #playground{
+        background: transparent;
+        width: 200px;
+        height: 400px;
+        position: relative;
+        overflow: hidden;
+        border-width: 11px;
+        border-color: #FFFFFF;
+        border-style: solid;
+      }
+
+      #ball {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        left: 100px;
+        top: 100px;
+      }
+
+      #score {
+        color: #FF0000;
+        font-size: 25px;
+        font-style: oblique;
+      }
+
+      #life {
+        color: #33CC00;
+        font-size: 25px;
+        font-style: oblique;
+      }
+
+      #preface {
+        color :#000066;
+        text-align: center;
+        font-size: 20px;
+      }
+
+      #Secondepreface {
+        color: #0033FF;
+        text-align: center;
+        font-size: 17px;
+      }
+
+      #game {
+        align-self: center;
+      }
+
+      #backgroundIMG {
+        position: absolute;
+        top: -30px;
+        left: 0px;
+        z-index: -100;
+      }
+
+      h1 {
+        color: #3300CC;
+        font-size: 30px;
+        text-align: center;;
+      }
+
+      body {
+        background-color: #FFCC33;
+      }
+
+      button {
+        background-color: #330000;
+        color: #FFCC33;
+        font-size: 25px;
+      }
+
+      .spaceshipePlayerClass {
+        left: 50px;
+        top: 350px;
+        position: absolute;
+        width: 30px;
+        height: 50px;
+      }
+
+      .under-title {
+        color : #6633CC;
+      }
+
+      .credit {
+        color: black;
+        font-size: 10px;
+      }
+
+    </style>
+
+  </head>
+  <body>
+    <h1 id = "titleH"> Space Invaders</h1>
+    <p id="preface">Move your spaceship and shoot to kill space invaders!</p>
+    <center>
+      <div id="parametre">
+        <p id="Secondepreface">Grab colorful space invaders to earn bonuses!</br>
+        Use arrows keys to move your spaceship</br>
+        and use spacebar to shoot rockets.</p>
+        <p class = "under-title" >Life:</p>
+        <input type="radio" id="avec" name="life" checked="checked"></input><label for="avec">With life</label>
+        <input type="radio" id="sans" name="life"></input><label for="sans">Without life</label>
+
+        <p class = "under-title" >Ball speed:</p>
+        <input type="radio" id="lent" name="speed" checked="checked"></input><label for="lent">Slow</label>
+        <input type="radio" id="moyenS" name="speed"></input><label for="moyenS">Medium</label>
+        <input type="radio" id="vite" name="speed"></input><label for="vite">Fast</label>
+
+        <p class = "under-title">Your skill:</p>
+        <input type="radio" id="facile" name="skill" checked="checked"></input><label for="facile">Beginner</label>
+        <input type="radio" id="moyen" name="skill"></input><label for="moyen">Not bad</label>
+        <input type="radio" id="difficile" name="skill"></input><label for="difficile">Pro</label>
+
+        <p class = "under-title">Your spaceship:</p>
+        <input type="radio" id="red" name="ship" checked="checked"></input><label for="red">Red</label>
+        <input type="radio" id="blue" name="ship"></input><label for="blue">Grey</label>
+        <input type="radio" id="green" name="ship"></input><label for="green">White</label>
+      </br>
+      </br>
+        <button id = "buttonPlay" type="button" name="button">Play</button>
+        <p class="credit">Thanks to Sogomm (OpenGamerArt.Org) for its explosion pocty</p>
+        <p class="credit">Thanks to DevianArt.com for its rockets</p>
+        <p class="credit">Thanks to windowsphoneapks.com for its red spaceship</p>
+        <p class="credit">Thanks to Weclipart for its white spaceship</p>
+        <p class="credit">Thanks to mattkeeter.com for its grey spaceship</p>
+        <p class="credit">Music from sound-fishing.net</p>
+        <p class="credit">Free sounds from universal-soundbank.com and freesound.org</p>
+      </div>
+
+      <div id="gameSection" style="display: none;">
+        <p class = "info"><span id="score"></span><span id="life"></span></p>
+        <p class = "info" id = "life"></p>
+
+        <div id="game">
+          <div id="playground">
+            <img id="backgroundIMG" src="./cielEtoilePixel.png"/>
+            <img id="playerSpaceShip" class="spaceshipePlayerClass" src="./playerspaceship01.png"/>
+
+          </div>
+        </div>
+        <button id = "buttonQuit" type="button" name="button">Quit</button>
+      </div>
+
+
+      </center>
+
+      <script src="./jquery.js"></script>
+      <script src="./SkyForceExplosion.js"></script>
+      <script src="./SkyForceRocketLauncher.js"></script>
+      <script src="./SkyForceArena.js"></script>
+      <script src="./SkyForceInvadersController.js"></script>
+      <script src="./SkyForceSpaceshipController.js"></script>
+      <script src="./SkyForceSound.js"></script>
+      <script src="./SkyForceJavascript.js"></script>
+      <script>
+        console.log("Launch!");
+      </script>
+  </body>
+</html>
